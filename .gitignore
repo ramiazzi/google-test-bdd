@@ -1,0 +1,42 @@
+/build
+/classes
+*~
+*/web-app/gwt
+*/web-app/WEB-INF/classes
+target
+.gwt
+gwt-unitCache
+www-test
+user.properties
+
+*.class
+.vs
+
+# Package Files #
+*.jar
+*.war
+
+# gwt caches and compiled units #
+war/tripwegogwtmaterial/
+gwt-unitCache/
+
+# boilerplate generated classes #
+.apt_generated/
+
+# more caches and things from deploy #
+war/WEB-INF/deploy/
+war/WEB-INF/classes/
+
+#eclipse
+.settings
+
+war/font/
+/test-classes/
+
+.classpath
+
+.project
+/bin/
+
+.idea/
+*.iml
