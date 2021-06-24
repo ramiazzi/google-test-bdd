@@ -28,5 +28,8 @@ I hope this won't be an issue
 
 2) add a false test when searching something that doesn't have any links 
 
-
+NB: 
+Google chrome version 91 a été utilisé 
+faudra updaté le driver sinon ca marchera pas 
+le driver se situe dans /src/test/resources/webdriver
 
