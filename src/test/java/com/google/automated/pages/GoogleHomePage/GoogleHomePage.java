@@ -3,7 +3,6 @@ package com.google.automated.pages.GoogleHomePage;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-import com.google.automated.model.Browser;
 
 public class GoogleHomePage extends PageObject {
 
@@ -15,8 +14,19 @@ public class GoogleHomePage extends PageObject {
   @FindBy(xpath =".//a/div[@class='TbwUpd NJjxre']/cite[@class='iUh30 Zu0yb tjvcx']")
   private WebElementFacade firstResult;
 
+  @FindBy(xpath =".//span/div/div/div[2]")
+  private WebElementFacade popup;
+
+  @FindBy(xpath =".//span/div/div/div[3]/button[2]/div")
+  private WebElementFacade acceptButton;
+
   public void goToHomePage() {
     getDriver().get("http://google.fr");
+    waitABit(1000);
+    // click on accept button inside popup
+    if (popup.isPresent()){
+      acceptButton.click();
+    }
   }
 
   public boolean isHomePageDisplayed() {
